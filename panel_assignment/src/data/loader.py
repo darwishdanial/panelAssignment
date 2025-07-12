@@ -26,3 +26,4 @@ def fetch_and_save_json(url: str, output_path: str) -> None:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     df.to_excel(output_path, index=False)
     print(f"Saved to: {output_path}")
+#test
