@@ -64,8 +64,8 @@ def match_student_to_panel(student_title: str, student_area: str) -> str:
     query_text = f"{student_title} - {student_area}"
     query_embedding = embedding_model.embed_query(query_text)
 
-    # Search top 10 most similar docs
-    retrieved_docs = db.similarity_search_by_vector(query_embedding, k=10)
+    # Search top 15 most similar docs
+    retrieved_docs = db.similarity_search_by_vector(query_embedding, k=15)
 
     # Group matched documents by panel
     panel_matches = defaultdict(list)
@@ -83,3 +83,13 @@ student_area = "Deep Learning in Healthcare"
 
 recommendation = match_student_to_panel(student_title, student_area)
 print(recommendation)
+
+# {
+#   "Dr. Aiman": [
+#     "[publication] Deep Learning for Lung X-Ray Classification",
+#     "[grant] Brain Tumor Detection Using CNN"
+#   ],
+#   "Prof. Nurul": [
+#     "[fyp panel] AI in Cardiovascular Imaging"
+#   ]
+# }

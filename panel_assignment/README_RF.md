@@ -1,8 +1,6 @@
-# README.md
+# Random Forest Panel Assignment Pipeline - Overview
 
-# Panel Assignment ML Pipeline - Overview
-
-This repository contains a machine learning pipeline for predicting academic panel assignments based on project type and area. The workflow is organized in the `panel_assignment/notebooks_RF` folder, with each notebook representing a key step in the process.
+This is an overview of machine learning pipeline for predicting academic panel assignments using Random Forest
 
 ## Workflow Overview
 
