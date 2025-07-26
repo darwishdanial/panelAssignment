@@ -1,10 +1,16 @@
 # download_data.py
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load variables from .env
+PROJECT_URL = os.getenv("PROJECT_URL")
+EXAMINER_URL = os.getenv("EXAMINER_URL")
 
 from src.data.loader import fetch_and_save_json
 
 # URLs
-project_url = "http://web.fc.utm.my/~wmf12apps2/cgi-bin/webman/psm2/index_json-v2.cgi?entity=project"
-examiner_url = "http://web.fc.utm.my/~wmf12apps2/cgi-bin/webman/psm2/index_json-v2.cgi?entity=examiner"
+project_url = PROJECT_URL
+examiner_url = EXAMINER_URL
 
 # Output files
 project_output = "data/raw/project_data.xlsx"
